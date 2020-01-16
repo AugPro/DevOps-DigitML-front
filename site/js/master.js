@@ -1,7 +1,7 @@
 function predict(file) {
   let f = new FormData()
   f.append('img', file)
-  fetch('http://192.168.99.100:8000/api/predict/', { // TODO: change api address in prod
+  fetch('/api/predict/', { // TODO: change api address in prod
     method: 'POST',
     body: f
   }).then(
@@ -16,11 +16,11 @@ function predict(file) {
 function readURL(input) {
   if (input.files && input.files[0]) {
     var reader = new FileReader();
-    
+
     reader.onload = function(e) {
       $('#blah').attr('src', e.target.result);
     }
-    
+
     reader.readAsDataURL(input.files[0]);
   }
 }
