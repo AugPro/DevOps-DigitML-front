@@ -27,7 +27,7 @@ h1{
 }
 
 #preview {
-
+  max-width: 100%;
 }
 
 #result{
